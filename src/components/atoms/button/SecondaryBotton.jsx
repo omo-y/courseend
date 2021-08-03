@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Basebotton } from "./Basebotton.jsx";
 export const SecondaryBotton = (props) => {
-  const { children } = props;
+  const { children, onClick } = props;
   return (
     <div className="App">
-      <Sbutton>{children}</Sbutton>
+      <Sbutton onClick={onClick}>{children}</Sbutton>
     </div>
   );
 };
