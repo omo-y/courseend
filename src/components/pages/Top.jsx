@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { SecondaryBotton } from "../atoms/button/SecondaryBotton";
+import { useHistory } from "react-router-dom";
 export const Top = () => {
-  const onClickAdmin = () => alert("管理");
-  const onClickgeneral = () => alert("一般");
+  const history = useHistory();
+  const onClickAdmin = () =>
+    history.push({ pathname: "/Users", state: (isAdmin = true) });
+  const onClickgeneral = () =>
+    history.push({ pathname: "/Users", state: (isAdmin = false) });
   return (
     <Scontainar>
       <h2>ＴＯＰページ</h2>
